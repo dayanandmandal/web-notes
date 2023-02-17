@@ -1,0 +1,89 @@
+.label-image-list-and-submit-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#submit-button {
+  width: 70px;
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+}
+
+#submit-button:hover {
+  border: 2px solid black;
+}
+
+#form-add-notes {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  position: fixed;
+  padding: 20px 40px 20px 20px;
+  box-shadow: 0 0 10px 2px #ccc;
+  border-radius: 6px;
+  z-index: 2;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #ffffff;
+}
+
+.form-input-field {
+  width: 100%;
+  margin: 10px;
+  border: none;
+}
+
+.form-input-field:focus {
+  outline: none;
+}
+
+.label-image-list {
+  display: flex;
+  justify-content: center;
+}
+
+.label-image-list button {
+  margin: 2px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.label-image-list :nth-child(1) {
+  background: #f28b82;
+  border: 2px solid #f28b82;
+}
+.label-image-list :nth-child(2) {
+  background: #fbbc04;
+  border: 2px solid #fbbc04;
+}
+.label-image-list :nth-child(3) {
+  background: #fff475;
+  border: 2px solid #fff475;
+}
+.label-image-list :nth-child(4) {
+  background: #aecbfa;
+  border: 2px solid #aecbfa;
+}
+.label-image-list :nth-child(5) {
+  background: #ccff90;
+  border: 2px solid #ccff90;
+}
+.label-image-list :nth-child(6) {
+  background: #a7ffeb;
+  border: 2px solid #a7ffeb;
+}
+.label-image-list :nth-child(7) {
+  background: #d7aefb;
+  border: 2px solid #d7aefb;
+}
+.label-image-list :nth-child(8) {
+  background: #e8eaed;
+  border: 2px solid #e8eaed;
+}
+
+.label-image-list button:hover {
+  border-color: black;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Advanced Notes</title>
+
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/form-add-notes.css" />
+    <link rel="stylesheet" href="./css/note-card.css" />
+  </head>
+
+  <body onclick="globalClickEvent(event)">
+    <div class="multiple-archive-delete">
+      <button
+        type="button"
+        id="multiple-notes-button"
+        name="notes"
+        value="notes"
+        onclick="notesAllCard(event)"
+      >
+        Notes
+      </button>
+      <button
+        type="button"
+        id="multiple-archive-button"
+        name="archive"
+        value="archive"
+        onclick="archiveAllCard(event)"
+      >
+        Archive
+      </button>
+      <button
+        type="button"
+        id="multiple-delete-button"
+        name="delete"
+        value="delete"
+        onclick="deleteAllCard(event)"
+      >
+        Delete
+      </button>
+      <button
+        type="button"
+        id="multiple-close-button"
+        onclick="hideMultipleMenu()"
+        name="close"
+        value="close"
+      >
+        <img src="./images/close.png" alt="close" />
+      </button>
+    </div>
+    <header>
+      <div class="header-part-1">
+        <img
+          src="./images/main-menu.png"
+          alt="main-menu"
+          id="main-menu-img"
+          onclick="toggleSideMenu()"
+        />
+        <span id="show-current-section" style="padding-right: 10px">
+          Section
+        </span>
+      </div>
+      <div class="header-form-search">
+        <form action="#" id="form-search">
+          <input
+            type="search"
+            name="searchField"
+            minlength="3"
+            id="input-search-field"
+            required
+          />
+          <input
+            type="submit"
+            value="Search"
+            id="input-search-submit"
+            onclick=""
+          />
+        </form>
+      </div>
+      <div
+        class="header-new-notes"
+        onclick="showHideForm(event)"
+        data-form-display="hide"
+      >
+        <img
+          name="add-img"
+          src="./images/plus.png"
+          alt="add-sign"
+          id="header-new-notes-img"
+        />
+        New Notes
+      </div>
+    </header>
+
+    <!-- css - filter -->
+
+    <main>
+      <div class="main-form-add-notes" style="display: none">
+        <form
+          action=""
+          id="form-add-notes"
+          data-form-color="#ffffff"
+          data-form-note-id="0"
+          onsubmit="addNote(event)"
+        >
+          <input
+            type="text"
+            class="form-input-field"
+            name="titleField"
+            placeholder="Title"
+            maxlength="60"
+            required
+          />
+          <textarea
+            class="form-input-field"
+            name="description"
+            id="form-add-notes-description"
+            cols="50"
+            rows="8"
+            placeholder="Take a note..."
+            style="resize: none"
+          ></textarea>
+          <div class="label-image-list-and-submit-button">
+            <div
+              class="label-image-list"
+              onclick="changeFormBgColorOnClick(event)"
+              onmouseover="changeFormBgColorOnMouseOver(event)"
+              onmouseout="removeFormBgColorOnMouseOut()"
+            >
+              <button name="1" value="#f28b82" type="button"></button>
+              <button name="2" value="#fbbc04" type="button"></button>
+              <button name="3" value="#fff475" type="button"></button>
+              <button name="4" value="#aecbfa" type="button"></button>
+              <button name="5" value="#ccff90" type="button"></button>
+              <button name="6" value="#a7ffeb" type="button"></button>
+              <button name="7" value="#d7aefb" type="button"></button>
+              <button name="8" value="#e8eaed" type="button"></button>
+            </div>
+            <button type="submit" id="submit-button">Submit</button>
+          </div>
+          <div class="hidden-add-form" style="display: none">
+            <select name="category" id="category-hidden-add-form">
+              <option value="notes" selected></option>
+              <option value="archive"></option>
+              <option value="trash"></option>
+            </select>
+          </div>
+        </form>
+      </div>
+
+      <div class="side-menu" data-side-menu-display="show">
+        <a href="#" id="side-menu-notes-a" onclick="showNotes()">Notes</a>
+        <a href="#" id="side-menu-archive-a" onclick="showArchiveNotes()"
+          >Archives</a
+        >
+        <a href="#" id="side-menu-trash-a" onclick="showTrashNotes()">Trash</a>
+        <a href="#" id="side-menu-all-notes-a" onclick="showAllNotes()"
+          >All Notes</a
+        >
+      </div>
+      <div class="show-when-empty" style="display: none">
+        List is empty. Please click on New Notes to add notes.
+      </div>
+
+      <div class="notes-show"></div>
+      <div class="archive-show"></div>
+      <div class="trash-show"></div>
+      <div class="all-notes-show"></div>
+    </main>
+    <script src="./js/mutiple-delete-archive.js"></script>
+    <script src="./js/change-note-bg-color.js"></script>
+    <script src="./js/form-add-notes.js"></script>
+    <script src="./js/toggle-side-bar.js"></script>
+    <script src="./js/archive-note.js"></script>
+    <script src="./js/notes-note.js"></script>
+    <script src="./js/delete-note.js"></script>
+    <script src="./js/edit-note.js"></script>
+    <script src="./js/global-onclick-event.js"></script>
+    <script src="./js/trash-note.js"></script>
+  </body>
+</html>
