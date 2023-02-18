@@ -23,7 +23,7 @@
   padding: 20px 40px 20px 20px;
   box-shadow: 0 0 10px 2px #ccc;
   border-radius: 6px;
-  z-index: 2;
+  z-index: 100;
   top: 100px;
   left: 50%;
   transform: translate(-50%, 0);

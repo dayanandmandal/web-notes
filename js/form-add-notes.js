@@ -19,8 +19,10 @@ showNotes();
 
 function showNotes() {
   hideMultipleMenu();
+  hideAndClearSearchResultDiv();
   removeCategoryDiv();
   hideAllNotesCard();
+  clearSearchInputField();
   clearHighlightOfSideMenuAll();
   hightLightGivenSideMenu("notes");
   displayBlockGivenArray("notes");
@@ -33,8 +35,10 @@ function showNotes() {
 }
 
 function showArchiveNotes() {
+  hideAndClearSearchResultDiv();
   hideMultipleMenu();
   removeCategoryDiv();
+  clearSearchInputField();
   hideAllNotesCard();
   clearHighlightOfSideMenuAll();
   hightLightGivenSideMenu("archive");
@@ -56,7 +60,9 @@ function checkIfEmpty(arr) {
 
 function showTrashNotes() {
   hideAllNotesCard();
+  hideAndClearSearchResultDiv();
   removeCategoryDiv();
+  clearSearchInputField();
   hideAllNotesCard();
   clearHighlightOfSideMenuAll();
   hightLightGivenSideMenu("trash");
@@ -67,6 +73,8 @@ function showTrashNotes() {
 }
 
 function showAllNotes() {
+  clearSearchInputField();
+  hideAndClearSearchResultDiv();
   hideAllNotesCard();
   clearHighlightOfSideMenuAll();
   hightLightGivenSideMenu("all-notes");
@@ -182,9 +190,9 @@ function hideAllNotesCard() {
   }
 }
 
-function displayAllNotesFromGivenArray(arr) {
+function displayAllNotesFromGivenArray(arr, optional) {
   for (let obj of arr) {
-    appendNoteCard(obj);
+    appendNoteCard(obj, optional);
   }
 }
 
@@ -296,8 +304,13 @@ function getJavascriptObject(t, desc, cate, d, col) {
   return obj;
 }
 
-function appendNoteCard(obj) {
-  const div = document.querySelector(`.${obj.category}-show`);
+function appendNoteCard(obj, optional) {
+  let div;
+  if (optional == "search") {
+    div = document.querySelector(`.${optional}-show`);
+  } else {
+    div = document.querySelector(`.${obj.category}-show`);
+  }
   const cardDivHtml = getCardDiv(obj);
   const cardDivHtmlObject = getCardDivObject(cardDivHtml);
   div.appendChild(

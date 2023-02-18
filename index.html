@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/form-add-notes.css" />
     <link rel="stylesheet" href="./css/note-card.css" />
+    <link rel="stylesheet" href="./css/search.css" />
   </head>
 
   <body onclick="globalClickEvent(event)">
@@ -64,12 +65,18 @@
         </span>
       </div>
       <div class="header-form-search">
-        <form action="#" id="form-search">
+        <form
+          action="#"
+          id="form-search"
+          onsubmit="showSearchResult(event)"
+          oninput="showSearchResult(event)"
+        >
           <input
             type="search"
             name="searchField"
             minlength="3"
             id="input-search-field"
+            placeholder="Search"
             required
           />
           <input
@@ -77,6 +84,7 @@
             value="Search"
             id="input-search-submit"
             onclick=""
+            style="display: none"
           />
         </form>
       </div>
@@ -161,6 +169,7 @@
           >All Notes</a
         >
       </div>
+      <div class="search-show"></div>
       <div class="show-when-empty" style="display: none">
         List is empty. Please click on New Notes to add notes.
       </div>
@@ -170,6 +179,7 @@
       <div class="trash-show"></div>
       <div class="all-notes-show"></div>
     </main>
+    <script src="./js/search.js"></script>
     <script src="./js/mutiple-delete-archive.js"></script>
     <script src="./js/change-note-bg-color.js"></script>
     <script src="./js/form-add-notes.js"></script>
