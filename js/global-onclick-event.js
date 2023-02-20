@@ -1,4 +1,13 @@
 function globalClickEvent(event) {
+  const showErrorMessageFromAddTemp = document.querySelector(
+    ".error-message-form-add"
+  );
+
+  if (showErrorMessageFromAddTemp.contains(event.target)) {
+    return;
+  }
+  closeErrorMessageFromAdd();
+
   const newNote = document.querySelector(".header-new-notes");
   if (newNote.contains(event.target)) {
     return;

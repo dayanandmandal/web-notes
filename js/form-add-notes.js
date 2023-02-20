@@ -263,6 +263,13 @@ function addNote(event) {
     continueEditingFrom(event);
   }
 
+  const tempChar = event.target.titleField.value.substring(0, 1).toLowerCase();
+  if (!(tempChar == "_" || (tempChar >= "a" && tempChar <= "z"))) {
+    showErrorMessageFromAdd();
+    event.preventDefault();
+    return;
+  }
+
   const obj = getJavascriptObject(
     event.target.titleField.value,
     event.target.description.value,
@@ -424,3 +431,12 @@ function removeAddNoteText() {
 }
 
 // store data to notes[] array and store it in localStorage as well - end
+
+// close option for error message on form add form
+function closeErrorMessageFromAdd() {
+  document.querySelector(".error-message-form-add").style.zIndex = "";
+}
+
+function showErrorMessageFromAdd() {
+  document.querySelector(".error-message-form-add").style.zIndex = 121;
+}

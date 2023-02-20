@@ -94,8 +94,6 @@ header {
 
 #input-search-submit:hover {
   background: #ffce1c;
-  /* #feefc3 */
-  /* color: #fff; */
 }
 
 /* part 3 */
@@ -128,6 +126,10 @@ header {
   left: 0;
   top: 60px;
   background-color: #ffffff;
+  /* border: white; */
+  border-right: 2px solid white;
+  padding-right: 10px;
+  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
 }
 
 .side-menu a {

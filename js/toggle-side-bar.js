@@ -17,6 +17,6 @@ function hideSideMenu(sideMenu) {
 }
 
 function showSideMenu(sideMenu) {
-  document.body.style.paddingLeft = "200px";
+  document.body.style.paddingLeft = "225px";
   sideMenu.classList.remove("hide-side-menu");
 }

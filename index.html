@@ -74,9 +74,10 @@
           <input
             type="search"
             name="searchField"
-            minlength="3"
+            minlength="1"
             id="input-search-field"
             placeholder="Search"
+            title=""
             required
           />
           <input
@@ -106,6 +107,28 @@
     <!-- css - filter -->
 
     <main>
+      <div class="error-message-form-add">
+        <div class="error-message-form-add-close-button-div">
+          <button
+            type="button"
+            id="error-message-form-add-close-button"
+            onclick="closeErrorMessageFromAdd()"
+            name="close"
+            value="close"
+          >
+            <img
+              src="./images/close.png"
+              alt="close"
+              id="error-message-form-add-close-button-img"
+            />
+          </button>
+        </div>
+
+        <p>
+          Title's first character can only be alphabet([A-Za-z]) or
+          underscore(_).
+        </p>
+      </div>
       <div class="main-form-add-notes" style="display: none">
         <form
           action=""

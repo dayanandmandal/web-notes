@@ -1,3 +1,40 @@
+.error-message-form-add {
+  position: fixed;
+  width: 300px;
+  height: 100px;
+  top: 30%;
+  left: 45%;
+  padding: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  background: white;
+  border-radius: 5px;
+  z-index: -20;
+}
+
+.error-message-form-add-close-button-div {
+  display: flex;
+  justify-content: end;
+}
+
+#error-message-form-add-close-button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  padding-bottom: 15px;
+  /* margin-bottom: 15px; */
+  background: transparent;
+  border-radius: 5px;
+}
+
+#error-message-form-add-close-button-img {
+  width: 10px;
+  height: 10px;
+}
+
+#error-message-form-add-close-button:hover {
+  background: #dddddd;
+}
+
 .label-image-list-and-submit-button {
   display: flex;
   justify-content: space-between;
