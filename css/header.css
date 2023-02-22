@@ -146,27 +146,11 @@ header {
   background-color: #dddddd;
 }
 
-/* @media screen and (max-width: 720px) {
-  body {
-    padding-left: 20px;
-  }
-
-  .side-menu {
-    margin-left: -200px;
-  }
-}
-
-@media screen and (min-width: 720px) {
-  body {
-    padding-left: 200px;
-  }
-} */
-
 .hide-side-menu {
   margin-left: -200px;
 }
 
-/* mulutple archive delete */
+/* multiple archive delete */
 
 .multiple-archive-delete {
   display: flex;
@@ -203,6 +187,16 @@ header {
 }
 
 .multiple-archive-delete button:hover {
-  /* border-color: #777; */
   background: #ffce1c;
+}
+
+/* for mobile */
+
+@media screen and (max-width: 720px) {
+  #show-current-section {
+    display: none;
+  }
+  .header-part-1 {
+    margin-right: 20px;
+  }
 }
